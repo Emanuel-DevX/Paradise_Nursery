@@ -130,3 +130,40 @@ document.getElementById("btnClear").addEventListener("click", () => {
   document.getElementById("searchInput").value = "";
   document.getElementById("resultContainer").innerHTML = "";
 });
+
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault(); // prevent page reload
+
+  const name = document.getElementById("contactName").value.trim();
+  const email = document.getElementById("contactEmail").value.trim();
+  const message = document.getElementById("contactMessage").value.trim();
+  const response = document.getElementById("formResponse");
+
+  // Basic validation
+  if (!name || !email || !message) {
+    response.textContent = "Please fill in all fields.";
+    response.className = "text-red-400 mt-2";
+    return;
+  }
+
+  if (!validateEmail(email)) {
+    response.textContent = "Please enter a valid email address.";
+    response.className = "text-yellow-400 mt-2";
+    return;
+  }
+
+  // Simulate success
+  response.textContent = `Thank you, ${name}! Your message has been received.`;
+  response.className = "text-green-400 mt-2";
+
+  // Clear form fields
+  document.getElementById("contactName").value = "";
+  document.getElementById("contactEmail").value = "";
+  document.getElementById("contactMessage").value = "";
+});
+
+// Simple email validation function
+function validateEmail(email) {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(String(email).toLowerCase());
+}
