@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TravelBloom - Recommendations by Emanuel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+    <style>
+      body {
+        background: url("https://images.unsplash.com/photo-1488085061387-422e29b40080?q=80&w=3131&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+          no-repeat center center fixed;
+        background-size: cover;
+      }
+    </style>
+  </head>
+
+  <body class="text-white">
+    <!-- Navbar -->
+    <nav
+      class="bg-black/80 p-4 fixed top-0 w-full flex flex-wrap items-center justify-between shadow-md"
+    >
+      <div class="flex items-center space-x-3">
+        <img
+          src="https://img.icons8.com/color/48/globe--v1.png"
+          alt="logo"
+          class="h-8 w-8"
+        />
+        <span class="text-xl font-bold text-white">TravelBloom</span>
+      </div>
+
+      <ul class="flex items-center space-x-6 text-sm sm:text-base">
+        <li><a href="#home" class="hover:text-blue-400">Home</a></li>
+        <li><a href="#about" class="hover:text-blue-400">About Us</a></li>
+        <li><a href="#contact" class="hover:text-blue-400">Contact Us</a></li>
+      </ul>
+
+      <div class="flex items-center space-x-2 mt-2 sm:mt-0">
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="Search destinations..."
+          class="rounded-md p-2 text-black w-48 sm:w-64 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <button
+          id="btnSearch"
+          class="bg-blue-600 px-4 py-2 rounded hover:bg-blue-700"
+        >
+          Search
+        </button>
+        <button
+          id="btnClear"
+          class="bg-red-600 px-4 py-2 rounded hover:bg-red-700"
+        >
+          Clear
+        </button>
+      </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section
+      id="home"
+      class="h-screen pt-32 md:pt-16 flex flex-col md:flex-row items-center justify-center px-6 bg-black/60"
+    >
+      <div class="md:w-1/2 max-w-2xl space-y-6">
+        <h1 class="text-5xl font-extrabold leading-tight text-white">
+          Explore the World's Hidden Treasures
+        </h1>
+        <p class="text-lg text-gray-200">
+          Whether you're dreaming of sun-soaked beaches, ancient temples, or
+          breathtaking landscapes, TravelBloom brings you personalized
+          recommendations to spark your next adventure. Let us guide you to
+          destinations tailored to your passions and curiosity.
+        </p>
+      </div>
+
+      <div
+        id="resultContainer"
+        class="md:w-1/2 mt-8 md:mt-0 w-full h-[300px] border-2 border-white rounded-lg p-4"
+      ></div>
+    </section>
+
+    <!-- About Us Section -->
+    <section
+      id="about"
+      class="h-screen px-6 py-16 bg-gray-900/90 flex items-center justify-center"
+    >
+      <div class="max-w-4xl text-center space-y-6">
+        <h2 class="text-4xl font-bold text-blue-400">About Us</h2>
+        <p>
+          TravelBloom was founded on the belief that travel should be
+          meaningful, accessible, and inspiring. We curate recommendations not
+          just from data—but from a passion for discovering the unknown. Built
+          by Emanuel Fisha Molla as part of the IBM Full Stack Developer
+          program, this app showcases a blend of modern technology and
+          wanderlust.
+        </p>
+        <p>
+          Behind every recommendation lies a story—our aim is to help you write
+          yours. Our mission is to empower every traveler to explore the world,
+          one destination at a time, using intelligent tools and personalized
+          guidance.
+        </p>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6">
+          <div class="bg-gray-800 p-4 rounded shadow">
+            <h3 class="font-bold text-lg">Emanuel Fisha Molla</h3>
+            <p class="text-sm text-gray-400">Full Stack Developer</p>
+          </div>
+          <!-- Add more team members if needed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section
+      id="contact"
+      class="h-screen px-6 py-16 bg-black/70 flex items-center justify-center"
+    >
+      <form
+        class="max-w-lg w-full space-y-4 bg-gray-800 p-6 rounded-lg shadow text-left"
+      >
+        <h2 class="text-3xl font-bold text-blue-400 mb-4">Contact Us</h2>
+        <input
+          type="text"
+          placeholder="Your Name"
+          class="w-full p-3 rounded text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <input
+          type="email"
+          placeholder="Your Email"
+          class="w-full p-3 rounded text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <textarea
+          placeholder="Your Message"
+          rows="4"
+          class="w-full p-3 rounded text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+        ></textarea>
+        <button
+          type="submit"
+          class="bg-blue-600 px-4 py-2 rounded hover:bg-blue-700"
+        >
+          Submit
+        </button>
+      </form>
+    </section>
+
+    <!-- JS -->
+    <script>
+      document.getElementById("btnSearch").addEventListener("click", () => {
+        const keyword = document
+          .getElementById("searchInput")
+          .value.trim()
+          .toLowerCase();
+        const resultDiv = document.getElementById("resultContainer");
+
+        resultDiv.innerHTML = `<p class="text-lg">Searching for: <strong>${keyword}</strong>... (functionality coming soon)</p>`;
+      });
+
+      document.getElementById("btnClear").addEventListener("click", () => {
+        document.getElementById("searchInput").value = "";
+        document.getElementById("resultContainer").innerHTML = "";
+      });
+    </script>
+  </body>
+</html>
