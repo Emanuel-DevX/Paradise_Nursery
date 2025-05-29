@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emanuel's Mini Web Apps</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+      };
+    </script>
+  </head>
+  <body class="bg-gray-900 text-gray-100 min-h-screen p-6">
+    <div class="max-w-3xl mx-auto">
+      <h1 class="text-4xl font-bold mb-4 text-blue-400 text-center">Emanuel's Mini Web Apps</h1>
+      <p class="text-lg text-gray-300 text-center mb-8">
+        This website contains a collection of mini web applications created by Emanuel as part of the IBM Full Stack Software Development program.
+      </p>
+
+      <ul id="app-list" class="space-y-3">
+        <!-- Links will be added here -->
+      </ul>
+    </div>
+
+    <script>
+      const projects = [
+        { name: "Weather App", path: "weatherReport/index.html" },
+        { name: "Health Analysis", path: "healthCensus/index.html" },
+        // { name: "Memory Game", path: "memory-game/index.html" },
+        // { name: "Form Validator", path: "form-validator/index.html" },
+        // Add more projects here
+      ];
+
+      const appList = document.getElementById("app-list");
+
+      projects.forEach((project) => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+          <a href="${project.path}" 
+             class="block bg-gray-800 hover:bg-gray-700 text-white px-4 py-3 rounded-lg transition-colors duration-200"
+             target="_blank"
+          >
+            ${project.name}
+          </a>
+        `;
+        appList.appendChild(li);
+      });
+    </script>
+  </body>
+</html>

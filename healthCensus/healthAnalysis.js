@@ -69,10 +69,10 @@
         const resultDiv = document.getElementById('result');
         resultDiv.innerHTML = '';
 
-        fetch('health_analysis.json')
+        fetch('healthAnalysis.json')
           .then(response => response.json())
           .then(data => {
-            const condition = data.conditions.find(item => item.name.toLowerCase() === input);
+            const condition = data.conditions.find(item => item.name.toLowerCase().includes(input));
 
             if (condition) {
               const symptoms = condition.symptoms.join(', ');
