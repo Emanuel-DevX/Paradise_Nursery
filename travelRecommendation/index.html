@@ -150,22 +150,6 @@
       </form>
     </section>
 
-    <!-- JS -->
-    <script>
-      document.getElementById("btnSearch").addEventListener("click", () => {
-        const keyword = document
-          .getElementById("searchInput")
-          .value.trim()
-          .toLowerCase();
-        const resultDiv = document.getElementById("resultContainer");
-
-        resultDiv.innerHTML = `<p class="text-lg">Searching for: <strong>${keyword}</strong>... (functionality coming soon)</p>`;
-      });
-
-      document.getElementById("btnClear").addEventListener("click", () => {
-        document.getElementById("searchInput").value = "";
-        document.getElementById("resultContainer").innerHTML = "";
-      });
-    </script>
+    
   </body>
 </html>
