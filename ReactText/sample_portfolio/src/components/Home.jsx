@@ -1,5 +1,5 @@
 
-import EmanuelImg from '../../public/image.jpg';
+import EmanuelImg from '/image.jpg';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 import { FaComments, FaLaptopCode, FaTerminal, FaUser, FaPenNib, FaTools } from 'react-icons/fa';
@@ -47,7 +47,7 @@ function Home({onAppClick}) {
 
             </div>
 
-            <div className='flex flex-col items-center justify-end '>
+            <div className='flex flex-col items-center justify-end text-center'>
 <p>  Passionate backend developer with a focus on building robust APIs, efficient data pipelines, and scalable web applications. I love solving real-world problems with clean code and powerful tools like Node.js, MongoDB, and Python.
 </p>       <button className='border-2 px-3 p-1 rounded-full mx-auto my-4'>Resume</button>
       
@@ -63,7 +63,7 @@ function Home({onAppClick}) {
         <button
             key={app}
             onClick={() => onAppClick(app)}
-            className="md:w-[30%] w-[46%] h-40 flex flex-col bg-black/20 rounded-xl shadow-md hover:scale-105 transition"
+            className="md:w-[30%] w-[46%] h-40 flex flex-col bg-black/20 rounded-xl overflow-clip shadow-md hover:scale-105 transition"
         >
             <div className="bg-zinc-900 text-white font-bold text-start px-3 p-1">
             {app}
