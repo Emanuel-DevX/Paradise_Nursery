@@ -1,0 +1,30 @@
+{
+  "name": "ibm-fullstack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .js,.jsx",
+    "lint:fix": "eslint . --ext .js,.jsx --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Emanuel-DevX/IBM-Fullstack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Emanuel-DevX/IBM-Fullstack/issues"
+  },
+  "homepage": "https://github.com/Emanuel-DevX/IBM-Fullstack#readme",
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.27.5",
+    "@babel/preset-react": "^7.27.1",
+    "@eslint/js": "^9.29.0",
+    "eslint": "^9.29.0",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.2.0"
+  }
+}

@@ -1,13 +1,13 @@
 // AppLauncherNavbar.jsx
-import React from 'react';
+import React from "react";
 
 const AppLauncherNavbar = ({ onAppClick, appIcons }) => {
-  const apps = ['Chat', 'Projects', 'Terminal', 'About', 'Blog', 'Tech'];
+  const apps = ["Chat", "Projects", "Terminal", "About", "Blog", "Tech"];
 
   return (
     <nav className="w-full bg-black/30 backdrop-blur-sm shadow-md fixed bottom-0 left-0 max-w-6xl z-50">
       <div className="max-w-screen-xl mx-auto flex items-center justify-between px-4 py-3 overflow-x-auto scrollbar-hide space-x-4">
-        {apps.map(app => (
+        {apps.map((app) => (
           <button
             key={app}
             onClick={() => onAppClick(app)}

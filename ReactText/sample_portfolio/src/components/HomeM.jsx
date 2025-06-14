@@ -1,6 +1,19 @@
-import { useState, useEffect } from 'react';
-import { FaGithub, FaLinkedin, FaEnvelope, FaComments, FaLaptopCode, FaTerminal, FaUser, FaPenNib, FaTools, FaCode, FaBlog, FaChevronDown } from 'react-icons/fa';
-import EmanuelImg from '/image.jpg';
+import { useState, useEffect } from "react";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+  FaComments,
+  FaLaptopCode,
+  FaTerminal,
+  FaUser,
+  FaPenNib,
+  FaTools,
+  FaCode,
+  FaBlog,
+  FaChevronDown,
+} from "react-icons/fa";
+import EmanuelImg from "/image.jpg";
 
 const AppLauncherNavbar = ({ onAppClick, appIcons, activeApp }) => (
   <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50">
@@ -10,9 +23,9 @@ const AppLauncherNavbar = ({ onAppClick, appIcons, activeApp }) => (
           key={app}
           onClick={() => onAppClick(app)}
           className={`p-3 rounded-xl transition-all duration-300 hover:scale-110 ${
-            activeApp === app 
-              ? 'bg-cyan-500 text-black' 
-              : 'bg-white/10 text-white hover:bg-white/20'
+            activeApp === app
+              ? "bg-cyan-500 text-black"
+              : "bg-white/10 text-white hover:bg-white/20"
           }`}
         >
           {icon}
@@ -53,14 +66,14 @@ const FloatingParticles = () => {
 };
 
 const TypewriterText = ({ text, delay = 100 }) => {
-  const [displayText, setDisplayText] = useState('');
+  const [displayText, setDisplayText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     if (currentIndex < text.length) {
       const timer = setTimeout(() => {
-        setDisplayText(prev => prev + text[currentIndex]);
-        setCurrentIndex(prev => prev + 1);
+        setDisplayText((prev) => prev + text[currentIndex]);
+        setCurrentIndex((prev) => prev + 1);
       }, delay);
       return () => clearTimeout(timer);
     }
@@ -110,7 +123,7 @@ function Home() {
 
   useEffect(() => {
     setIsLoaded(true);
-    
+
     const handleMouseMove = (e) => {
       setMousePosition({
         x: (e.clientX / window.innerWidth) * 100,
@@ -118,8 +131,8 @@ function Home() {
       });
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
   const handleAppClick = (app) => {
@@ -130,25 +143,34 @@ function Home() {
     const AppContent = ({ title }) => (
       <div className="text-center py-20">
         <h2 className="text-3xl font-bold text-cyan-400 mb-4">{title}</h2>
-        <p className="text-zinc-300">This is a demo of the {title} app content.</p>
+        <p className="text-zinc-300">
+          This is a demo of the {title} app content.
+        </p>
       </div>
     );
 
     switch (activeApp) {
-      case 'Chat': return <AppContent title="Chat" />;
-      case 'Projects': return <AppContent title="Projects" />;
-      case 'Terminal': return <AppContent title="Terminal" />;
-      case 'About': return <AppContent title="About" />;
-      case 'Blog': return <AppContent title="Blog" />;
-      case 'Tech': return <AppContent title="Tech Stack" />;
-      default: return null;
+      case "Chat":
+        return <AppContent title="Chat" />;
+      case "Projects":
+        return <AppContent title="Projects" />;
+      case "Terminal":
+        return <AppContent title="Terminal" />;
+      case "About":
+        return <AppContent title="About" />;
+      case "Blog":
+        return <AppContent title="Blog" />;
+      case "Tech":
+        return <AppContent title="Tech Stack" />;
+      default:
+        return null;
     }
   };
 
   return (
     <div className="w-screen h-screen bg-gradient-to-br from-zinc-900 via-black to-zinc-800 text-white overflow-hidden relative">
       {/* Dynamic Background with Mouse Interaction */}
-      <div 
+      <div
         className="absolute inset-0 opacity-30"
         style={{
           background: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, 
@@ -164,42 +186,50 @@ function Home() {
 
       {/* Grid Pattern Overlay */}
       <div className="absolute inset-0 opacity-10">
-        <div className="w-full h-full" style={{
-          backgroundImage: `
+        <div
+          className="w-full h-full"
+          style={{
+            backgroundImage: `
             linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
             linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
           `,
-          backgroundSize: '50px 50px'
-        }} />
+            backgroundSize: "50px 50px",
+          }}
+        />
       </div>
 
       {/* Landing Page Section */}
       {!activeApp && (
         <div className="max-w-6xl mx-auto h-full flex flex-col items-center justify-center px-6 relative z-10">
           {/* Animated Profile Section */}
-          <div className={`flex flex-col md:flex-row items-center justify-center transition-all duration-1000 ${
-            isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}>
-            
+          <div
+            className={`flex flex-col md:flex-row items-center justify-center transition-all duration-1000 ${
+              isLoaded
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
+            }`}
+          >
             {/* Enhanced Profile Image */}
             <div className="relative w-48 h-48 md:w-64 md:h-64 mb-8 md:mb-0 md:mr-12 group">
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500  p-1">
                 <div className="w-full h-full rounded-full overflow-hidden bg-black">
                   <img
                     src={EmanuelImg}
-                    
                     alt="Emanuel"
                     className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/20 via-transparent to-purple-500/20" />
                 </div>
               </div>
-              
+
               {/* Floating Icons */}
               <div className="absolute -top-2 -right-2 w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center animate-bounce">
                 <FaCode className="text-black text-sm" />
               </div>
-              <div className="absolute -bottom-2 -left-2 w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center animate-bounce" style={{ animationDelay: '0.5s' }}>
+              <div
+                className="absolute -bottom-2 -left-2 w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center animate-bounce"
+                style={{ animationDelay: "0.5s" }}
+              >
                 <FaLaptopCode className="text-white text-sm" />
               </div>
             </div>
@@ -213,14 +243,23 @@ function Home() {
                   </span>
                 </h1>
                 <h2 className="text-lg md:text-2xl text-zinc-300 font-medium">
-                  <TypewriterText text="Backend Developer · Data Engineer" delay={80} />
+                  <TypewriterText
+                    text="Backend Developer · Data Engineer"
+                    delay={80}
+                  />
                 </h2>
               </div>
 
               <p className="text-sm md:text-base text-zinc-300 leading-relaxed">
-                Building robust APIs and efficient data pipelines. Passionate about solving 
-                real-world problems with <span className="text-cyan-400 font-semibold">clean code</span> and 
-                <span className="text-purple-400 font-semibold"> scalable systems</span>.
+                Building robust APIs and efficient data pipelines. Passionate
+                about solving real-world problems with{" "}
+                <span className="text-cyan-400 font-semibold">clean code</span>{" "}
+                and
+                <span className="text-purple-400 font-semibold">
+                  {" "}
+                  scalable systems
+                </span>
+                .
               </p>
 
               {/* Enhanced Stats */}
@@ -242,15 +281,33 @@ function Home() {
               {/* Enhanced Social Links */}
               <div className="flex gap-4 justify-center md:justify-start">
                 {[
-                  { icon: <FaGithub />, href: "https://github.com/Emanuel-DevX", color: "hover:text-gray-400" },
-                  { icon: <FaLinkedin />, href: "https://www.linkedin.com/in/emanuel-molla", color: "hover:text-blue-400" },
-                  { icon: <FaEnvelope />, href: "mailto:emanuelmolla@outlook.com", color: "hover:text-red-400" }
+                  {
+                    icon: <FaGithub />,
+                    href: "https://github.com/Emanuel-DevX",
+                    color: "hover:text-gray-400",
+                  },
+                  {
+                    icon: <FaLinkedin />,
+                    href: "https://www.linkedin.com/in/emanuel-molla",
+                    color: "hover:text-blue-400",
+                  },
+                  {
+                    icon: <FaEnvelope />,
+                    href: "mailto:emanuelmolla@outlook.com",
+                    color: "hover:text-red-400",
+                  },
                 ].map((social, index) => (
                   <a
                     key={index}
                     href={social.href}
-                    target={social.href.startsWith('mailto:') ? undefined : "_blank"}
-                    rel={social.href.startsWith('mailto:') ? undefined : "noopener noreferrer"}
+                    target={
+                      social.href.startsWith("mailto:") ? undefined : "_blank"
+                    }
+                    rel={
+                      social.href.startsWith("mailto:")
+                        ? undefined
+                        : "noopener noreferrer"
+                    }
                     className={`text-2xl p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 transition-all duration-300 hover:scale-110 hover:bg-white/20 ${social.color}`}
                   >
                     {social.icon}
@@ -263,8 +320,8 @@ function Home() {
                 <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 hover:scale-105 shadow-lg">
                   Download Resume
                 </button>
-                <button 
-                  onClick={() => handleAppClick('Projects')}
+                <button
+                  onClick={() => handleAppClick("Projects")}
                   className="px-6 py-3 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300 hover:scale-105"
                 >
                   View Projects
@@ -285,12 +342,20 @@ function Home() {
 
       {/* App Window */}
       {activeApp && (
-        <AppWindow app={activeApp} icon={appIcons[activeApp]} onClose={() => setActiveApp(null)}>
+        <AppWindow
+          app={activeApp}
+          icon={appIcons[activeApp]}
+          onClose={() => setActiveApp(null)}
+        >
           {renderActiveApp()}
         </AppWindow>
       )}
 
-      <AppLauncherNavbar onAppClick={handleAppClick} appIcons={appIcons} activeApp={activeApp} />
+      <AppLauncherNavbar
+        onAppClick={handleAppClick}
+        appIcons={appIcons}
+        activeApp={activeApp}
+      />
 
       <style>{`
         @keyframes gradient {
