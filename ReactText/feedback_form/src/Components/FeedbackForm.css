@@ -1,16 +1,24 @@
 nav{
-  background-color: #ed5484;
+  background-color: #3c0244;
   color: white;
   text-align: center;
   font-size: 30px;
+}
+*{
+  background-color: #181717;
+  color: white;
+}
+body{
+  background-color: rgb(34, 31, 31);
+  color:white;
 }
 .feedback-form {
     max-width: 400px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #181717;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
     font-family: Arial, sans-serif;
     border:1px solid #ecb4c6;
   }
