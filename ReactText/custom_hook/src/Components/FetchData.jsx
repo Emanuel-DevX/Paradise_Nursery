@@ -4,6 +4,8 @@ import "./FetchData.css"
 
 const FetchData = () => {
   const [data] = useFetch("https://api.npoint.io/9045c260b1565daa9e15");
+  // const [data] = useFetch("https://api.npoint.io/4459a9a10e43812e1152");
+
   if (data) console.log(data);
   return (
     <>
@@ -14,10 +16,10 @@ const FetchData = () => {
             return (
               <li key={veg.name}>
                 <h3>{veg.name}</h3>
-                <p>
+                {veg.importance && <p>
                   <strong>Importance: </strong>
                   {veg.importance}
-                </p>
+                </p>}
                 <p>
                   <strong>Benefits: </strong>
                   {veg.benefits}
