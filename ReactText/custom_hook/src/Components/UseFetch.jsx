@@ -3,12 +3,12 @@ const UseFetch = (url) => {
   const [data, setData] = useState();
   useEffect(() => {
     fetch(url)
-      .then(resizeBy.json())
+      .then((resp) => resp.json())
       .then((data) => {
         setData(data);
       });
   }, []);
-  return [data]
+  return [data];
 };
 
 export default UseFetch;
