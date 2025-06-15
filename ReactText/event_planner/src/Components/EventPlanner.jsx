@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
+import Footer from "./Footer";
 import "./EventPlanner.css"; // Import CSS file for styling
 
 const EventPlanner = () => {
@@ -53,13 +54,56 @@ const EventPlanner = () => {
         </ul>
       </section>
       {/* Section to highlight app features or functionalities */}
-      <section className="features">{/* Features content goes here */}</section>
+      <section className="features">
+        {/* Section heading */}
+        <h2>Features</h2>
+        {/* List of key platform features */}
+        <ul>
+          <li>Easy event creation and management</li>
+          <li>Customizable event templates</li>
+          <li>Guest list management</li>
+          <li>Real-time collaboration</li>
+          <li>Reminders and notifications</li>
+        </ul>
+      </section>{" "}
       {/* Section to showcase user reviews or testimonials */}
       <section className="testimonials">
-        {/* Testimonials content goes here */}
+        {/* Section heading */}
+        <h2>Testimonials</h2>
+        {/* Individual testimonial block */}
+        <div className="testimonial">
+          <p>
+            "Event Planner made organizing my wedding a breeze. Highly
+            recommended!"
+          </p>
+          <p className="author">- Emily Johnson</p>
+        </div>
+        {/* Another testimonial block */}
+        <div className="testimonial">
+          <p>
+            "I use Event Planner for all my corporate events. It saves me so
+            much time and effort!"
+          </p>
+          <p className="author">- John Smith</p>
+        </div>
       </section>
       {/* Section to provide contact information or a contact form */}
-      <section className="contact">{/* Contact content goes here */}</section>
+      <section className="contact">
+        {/* Section heading */}
+        <h2>Contact Us</h2>
+        {/* Contact form */}
+        <form>
+          {/* Name input field */}
+          <input type="text" placeholder="Name" />
+          {/* Email input field */}
+          <input type="email" placeholder="Email" />
+          {/* Message textarea */}
+          <textarea placeholder="Message"></textarea>
+          {/* Submit button */}
+          <button className="submit-button">Send</button>
+        </form>
+      </section>{" "}
+      <Footer/>
     </div>
   );
 };
