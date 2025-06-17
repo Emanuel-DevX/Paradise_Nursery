@@ -1,62 +1,13 @@
-<!DOCTYPE html>
-<html lang="en" class="dark">
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="https://images.unsplash.com/photo-1551970634-747846a548cb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Emanuel's Mini Web Apps</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-      };
-    </script>
+    <title>Paradise Nursery</title>
   </head>
-  <body class="bg-gray-900 text-gray-100 min-h-screen p-6">
-    <div class="max-w-3xl mx-auto">
-      <h1 class="text-4xl font-bold mb-4 text-blue-400 text-center">
-        Emanuel's Mini Web Apps
-      </h1>
-      <p class="text-lg text-gray-300 text-center mb-8">
-        This website contains a collection of mini web applications created by
-        Emanuel as part of the IBM Full Stack Software Development program.
-      </p>
-
-      <ul id="app-list" class="space-y-3">
-        <!-- Links will be added here -->
-      </ul>
-    </div>
-
-    <script>
-      const projects = [
-        {
-          name: "Travel Recommendation",
-          path: "travelRecommendation/index.html",
-        },
-
-        { name: "Weather App", path: "weatherReport/index.html" },
-        { name: "Health Analysis", path: "healthCensus/index.html" },
-        {
-          name: "Sample Portfolio with react",
-          path: ".ReactText/sample_portfolio/index.html",
-        },
-        // Add more projects here
-      ];
-
-      const appList = document.getElementById("app-list");
-
-      projects.forEach((project) => {
-        const li = document.createElement("li");
-        li.innerHTML = `
-          <a href="${project.path}" 
-             class="block bg-gray-800 hover:bg-gray-700 text-white px-4 py-3 rounded-lg transition-colors duration-200"
-             target="_blank"
-          >
-            ${project.name}
-          </a>
-        `;
-        appList.appendChild(li);
-      });
-      console.log("test");
-    </script>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

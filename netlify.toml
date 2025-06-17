@@ -1,4 +1,0 @@
-[build]
-  base = "paradiseNursery"
-  command = "npm run build"
-  publish = "paradiseNursery/dist"
