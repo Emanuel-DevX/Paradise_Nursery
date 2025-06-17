@@ -1,0 +1,148 @@
+export const plants = [
+  {
+    title: "Snake Plant",
+    price: 19.99,
+    description: "Low-maintenance and air-purifying. Perfect for beginners.",
+    img: "https://images.unsplash.com/photo-1641789570360-370eaeac713e?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    onSale: true,
+  },
+  {
+    title: "Fiddle Leaf Fig",
+    price: 34.99,
+    description: "Tall, striking plant that makes a great statement piece.",
+    img: "https://images.unsplash.com/photo-1652047032006-c24e51f31267?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    onSale: false,
+  },
+  {
+    title: "ZZ Plant",
+    price: 22.5,
+    description: "Thrives in low light with minimal water requirements.",
+    img: "https://plus.unsplash.com/premium_photo-1743947642524-f1cddd6cb625?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    onSale: false,
+  },
+  {
+    title: "Peace Lily",
+    price: 18.75,
+    description: "Elegant white blooms and great for cleaning indoor air.",
+    img: "https://images.unsplash.com/photo-1707264689599-f4ab29ccbb1d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cGVhY2UlMjBsaWx5fGVufDB8MHwwfHx8MA%3D%3D",
+    onSale: true,
+  },
+  {
+    title: "Monstera Deliciosa",
+    price: 29.99,
+    description: "Famous for its unique split leaves and vibrant green.",
+    img: "https://images.unsplash.com/photo-1545165375-1b744b9ed444?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    onSale: true,
+  },
+  {
+    title: "Aloe Vera",
+    price: 15.0,
+    description: "Medicinal plant with soothing properties and easy care.",
+    img: "https://images.unsplash.com/photo-1570295835271-04c05b4ed943?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QWxvZSUyMHZlcmF8ZW58MHwwfDB8fHww",
+    onSale: false,
+  },
+  {
+    title: "Rubber Plant",
+    price: 25.0,
+    description: "Shiny deep-green leaves and strong vertical growth.",
+    img: "https://images.unsplash.com/photo-1643896505972-72e631fb5207?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    onSale: false,
+  },
+  {
+    title: "Pothos",
+    price: 12.99,
+    description: "Hardy trailing plant that thrives in most environments.",
+    img: "https://images.unsplash.com/photo-1623173508586-7d66cc5b1e69?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    onSale: true,
+  },
+  {
+    title: "Jade Plant",
+    price: 14.5,
+    description: "Succulent with thick, glossy leaves. Symbol of good luck.",
+    img: "https://images.unsplash.com/photo-1721593862532-d47667b41d3d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    onSale: false,
+  },
+  {
+    title: "Spider Plant",
+    price: 10.0,
+    description: "Produces baby plants and purifies the air.",
+    img: "https://images.unsplash.com/photo-1572688484438-313a6e50c333?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    onSale: true,
+  },
+  {
+    title: "Calathea Orbifolia",
+    price: 21.99,
+    description:
+      "Beautiful round leaves with silver stripes. Prefers humidity and indirect light.",
+    img: "https://images.unsplash.com/photo-1746567983538-c0bd447547ea?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    onSale: false,
+  },
+  {
+    title: "Bird of Paradise",
+    price: 39.99,
+    description:
+      "Tropical indoor plant with large banana-like leaves. Loves sunlight.",
+    img: "https://images.unsplash.com/photo-1631122751131-dce0e66ede2f?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    onSale: true,
+  },
+  {
+    title: "Boston Fern",
+    price: 16.75,
+    description:
+      "Classic indoor fern that thrives in moisture and shaded light.",
+    img: "https://images.unsplash.com/photo-1526744603200-a2792eb71ed6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    onSale: false,
+  },
+  {
+    title: "Chinese Evergreen",
+    price: 19.25,
+    description: "Adaptable plant with patterned leaves and easy care.",
+    img: "https://images.unsplash.com/photo-1666913803931-ebf1402047f7?q=80&w=1495&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    onSale: true,
+  },
+  {
+    title: "Prayer Plant",
+    price: 17.5,
+    description:
+      "Known for its folding leaves and colorful patterns. Low light friendly.",
+    img: "https://images.unsplash.com/photo-1623280292833-30facbf1eb84?q=80&w=1260&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    onSale: false,
+  },
+  {
+    title: "Dieffenbachia",
+    price: 20.0,
+    description:
+      "Lush, upright foliage. Ideal for shaded corners of your home.",
+    img: "https://images.unsplash.com/photo-1631556941887-f81ab0ecfda9?q=80&w=1360&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    onSale: false,
+  },
+  {
+    title: "Dracaena Marginata",
+    price: 24.99,
+    description: "Slim, spiky plant that adds vertical interest to any room.",
+    img: "https://images.unsplash.com/photo-1718202384246-7e834094eb6b?q=80&w=1473&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    onSale: true,
+  },
+  {
+    title: "Parlor Palm",
+    price: 13.99,
+    description:
+      "Compact palm great for tabletops and offices. Very low maintenance.",
+    img: "https://images.unsplash.com/photo-1687524358047-17fbe36c6902?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    onSale: true,
+  },
+  {
+    title: "Cast Iron Plant",
+    price: 18.0,
+    description: "Nearly indestructible plant that thrives on neglect.",
+    img: "https://images.unsplash.com/photo-1655731994127-42da1a02fdd4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    onSale: false,
+  },
+  {
+    title: "Philodendron Brasil",
+    price: 16.5,
+    description: "Heart-shaped leaves with variegated lime and green streaks.",
+    img: "https://images.unsplash.com/photo-1617268745770-03353462da85?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    onSale: true,
+  },
+];
