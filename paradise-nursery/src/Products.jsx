@@ -3,13 +3,19 @@
 import Navbar from "./components/Navbar";
 import PlantCard from "./components/PlantCard";
 import { plants } from "./plants";
+import { useSelector } from "react-redux";
 
 const ProductsPage = () => {
-    
+  const cartItems = useSelector((state) => state.cart.cartItems);
+  const itemsCount = cartItems.reduce(
+    (total, item) => total + item.quantity,
+    0
+  );
+
   return (
     <div className="min-h-screen bg-zinc-900 text-white">
       {/* Navbar */}
-      <Navbar cartCount={0} />
+      <Navbar cartCount={itemsCount} />
       {/* Main Content Placeholder */}
       <div className="max-w-6xl mx-auto px-4 py-10">
         <h2 className="text-3xl font-bold mb-6 mx-auto text-center">
