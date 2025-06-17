@@ -3,6 +3,7 @@
 import Navbar from "./components/Navbar";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import CartItemCard from "./components/CartItemCard";
 
 const ProductsPage = () => {
   const cartItems = useSelector((state) => state.cart.cartItems);
@@ -20,9 +21,12 @@ const ProductsPage = () => {
         <h2 className="text-3xl font-bold mb-6 mx-auto text-center">Cart </h2>
 
         {/* Product cards will go here later */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+        <div className="grid grid-cols-1  ">
+          {cartItems.map((item) => (
+            <CartItemCard item={item} key={item.title} />
+          ))}
+        </div>
         <div className="gap-3 flex justify-center">
-          
           <Link to="/products">
             <button className="cursor-pointer bg-zinc-700 p-2 rounded-full px-3 font-bold">
               Back to Shop
