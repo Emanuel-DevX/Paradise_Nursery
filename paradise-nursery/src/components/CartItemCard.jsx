@@ -21,7 +21,7 @@ const CartItemCard = ({ item }) => {
           alt={title}
           className="w-24 h-24 object-cover rounded-md border border-zinc-700"
         />
-        <div className="flex flex-col md:flex-row md:justify-between md:min-w-full ">
+        <div className="flex flex-col md:flex-row md:justify-between md:min-w-full md:pr-10">
           <div>
             <h3 className="font-semibold text-lg">{title}</h3>
             <p className="text-sm text-gray-400">${price.toFixed(2)} each</p>
