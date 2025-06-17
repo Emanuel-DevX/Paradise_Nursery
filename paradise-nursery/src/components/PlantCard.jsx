@@ -32,7 +32,7 @@ const PlantCard = ({ plant }) => {
             ${
               isInCart
                 ? "bg-gray-600 cursor-not-allowed text-gray-300"
-                : "bg-cyan-600 hover:bg-cyan-500 text-white"
+                : "bg-cyan-600 hover:bg-cyan-500 text-white cursor-pointer"
             }
           `}
         >
