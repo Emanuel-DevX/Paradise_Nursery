@@ -5,6 +5,7 @@ import PlantCard from "./components/PlantCard";
 import { plants } from "./plants";
 
 const ProductsPage = () => {
+    
   return (
     <div className="min-h-screen bg-zinc-900 text-white">
       {/* Navbar */}

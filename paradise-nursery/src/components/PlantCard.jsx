@@ -1,10 +1,18 @@
 // src/components/PlantCard.jsx
 import React from "react";
-
-const cartItems = []; // temporary placeholder for testing
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../cartSlice";
 
 const PlantCard = ({ plant }) => {
   const { title, price, description, img, onSale } = plant;
+
+  const dispatch = useDispatch();
+  const addPlantToCart = (plant) => {
+    dispatch(addToCart(plant));
+  };
+  const cartItems = useSelector((store) => {
+    store.cart.items;
+  });
 
   const isInCart = cartItems.some((item) => item.title === title);
 
@@ -27,6 +35,7 @@ const PlantCard = ({ plant }) => {
         <div className="text-cyan-400 font-bold mb-4">${price.toFixed(2)}</div>
 
         <button
+          onClick={addPlantToCart(plant)}
           disabled={isInCart}
           className={`w-full py-2 rounded-full font-semibold transition 
             ${
